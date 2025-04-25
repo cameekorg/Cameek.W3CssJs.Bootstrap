@@ -43,17 +43,27 @@ public static class PathsBootstrap
     public static string BootstrapUtilitiesRtlMinCss => "_content/Cameek.W3CssJs.Bootstrap/css/bootstrap/bootstrap-utilities.rtl.min.css";
 
     /// <summary>
-    /// Bootstrap Bundle JS
+    /// Bootstrap Bundle JS (includes Popper)
     /// </summary>
     public static string BootstrapBundleMinJs => "_content/Cameek.W3CssJs.Bootstrap/js/bootstrap/bootstrap.bundle.min.js";
 
     /// <summary>
-    /// Bootstrap ESM JS
+    /// Bootstrap ESM JS (for ES module environments)
     /// </summary>
     public static string BootstrapEsmMinJs => "_content/Cameek.W3CssJs.Bootstrap/js/bootstrap/bootstrap.esm.min.js";
 
     /// <summary>
-    /// Bootstrap Main JS
+    /// Bootstrap Main JS (no Popper)
     /// </summary>
     public static string BootstrapMinJs => "_content/Cameek.W3CssJs.Bootstrap/js/bootstrap/bootstrap.min.js";
+
+    /// <summary>
+    /// Bootstrap Icons font (WOFF)
+    /// </summary>
+    public static string BootstrapIconsWoff => "_content/Cameek.W3CssJs.Bootstrap/css/bootstrap/fonts/bootstrap-icons.woff";
+
+    /// <summary>
+    /// Bootstrap Icons font (WOFF2)
+    /// </summary>
+    public static string BootstrapIconsWoff2 => "_content/Cameek.W3CssJs.Bootstrap/css/bootstrap/fonts/bootstrap-icons.woff2";
 }

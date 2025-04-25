@@ -54,6 +54,17 @@ curl -o %TARGET_JS_DIR%/bootstrap.esm.min.js %URL_BASE%/js/bootstrap.esm.min.js
 curl -o %TARGET_JS_DIR%/bootstrap.esm.min.js.map %URL_BASE%/js/bootstrap.esm.min.js.map
 curl -o %TARGET_LICENSE% %URL_LICENSE%
 
+
+:: Fonts
+set URL_FONT_WOFF=https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/fonts/bootstrap-icons.woff
+set URL_FONT_WOFF2=https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/fonts/bootstrap-icons.woff2
+
+:: Font Target
+set TARGET_FONT_DIR=%TARGET_CSS_DIR%/fonts
+if not exist "%TARGET_FONT_DIR%" mkdir "%TARGET_FONT_DIR%"
+curl -o %TARGET_FONT_DIR%/bootstrap-icons.woff %URL_FONT_WOFF%
+curl -o %TARGET_FONT_DIR%/bootstrap-icons.woff2 %URL_FONT_WOFF2%
+
 @popd
 @prompt
 @echo.
@@ -61,3 +72,9 @@ curl -o %TARGET_LICENSE% %URL_LICENSE%
 @echo Finished downloading Bootstrap files
 @echo.
 @pause
+@echo.
+@echo Downloading Fonts
+@echo ------------------
+if not exist "%TARGET_CSS_DIR%/fonts" mkdir "%TARGET_CSS_DIR%/fonts"
+curl -o %TARGET_CSS_DIR%/fonts/bootstrap-icons.woff https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/fonts/bootstrap-icons.woff
+curl -o %TARGET_CSS_DIR%/fonts/bootstrap-icons.woff2 https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/fonts/bootstrap-icons.woff2
