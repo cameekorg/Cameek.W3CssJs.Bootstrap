@@ -27,8 +27,8 @@ echo
 echo "Configuring Target Directories and Files"
 echo "----------------------------------------"
 TARGET_WWW_DIR="../wwwroot"
-TARGET_CSS_DIR="${TARGET_WWW_DIR}/css/bootstrap"
-TARGET_JS_DIR="${TARGET_WWW_DIR}/js/bootstrap"
+TARGET_CSS_DIR="${TARGET_WWW_DIR}/css"
+TARGET_JS_DIR="${TARGET_WWW_DIR}/js"
 TARGET_FONT_DIR="${TARGET_CSS_DIR}/fonts"
 TARGET_LICENSE="${TARGET_WWW_DIR}/LICENSE-bootstrap.txt"
 

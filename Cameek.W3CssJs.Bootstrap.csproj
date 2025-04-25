@@ -10,7 +10,7 @@
 
         <!-- NuGet Metadata -->
         <PackageId>Cameek.W3CssJs.Bootstrap</PackageId>
-        <Version>5.3.1</Version>
+        <Version>5.3.2</Version>
         <Authors>Cameek</Authors>
         <Company>Cameek</Company>
         <Description>Static Razor Class Library with Bootstrap assets for syntax highlighting in Blazor WebAssembly and Blazor Server apps.</Description>

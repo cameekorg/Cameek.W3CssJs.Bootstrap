@@ -25,8 +25,8 @@ set URL_LICENSE=https://raw.githubusercontent.com/twbs/bootstrap/main/LICENSE
 @echo Configuring Target Directories and Files
 @echo ----------------------------------------
 set TARGET_WWW_DIR=../wwwroot
-set TARGET_CSS_DIR=%TARGET_WWW_DIR%/css/bootstrap
-set TARGET_JS_DIR=%TARGET_WWW_DIR%/js/bootstrap
+set TARGET_CSS_DIR=%TARGET_WWW_DIR%/css
+set TARGET_JS_DIR=%TARGET_WWW_DIR%/js
 set TARGET_FONT_DIR=%TARGET_CSS_DIR%/fonts
 set TARGET_LICENSE=%TARGET_WWW_DIR%/LICENSE-bootstrap.txt
 
