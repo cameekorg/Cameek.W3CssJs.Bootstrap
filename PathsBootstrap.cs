@@ -66,4 +66,10 @@ public static class PathsBootstrap
     /// Bootstrap Icons font (WOFF2)
     /// </summary>
     public static string BootstrapIconsWoff2 => "_content/Cameek.W3CssJs.Bootstrap/css/bootstrap/fonts/bootstrap-icons.woff2";
+    
+    /// <summary>
+    /// Bootstrap Icons CSS
+    /// </summary>
+    public static string BootstrapIconsCss => "_content/Cameek.W3CssJs.Bootstrap/css/bootstrap/bootstrap-icons.css";
+
 }
