@@ -9,11 +9,11 @@
 
 @echo Configuring Version and URLs
 @echo ----------------------------
-set VERSION=5.3.3
+set VERSION=5.3.6
 set URL_BASE=https://cdn.jsdelivr.net/npm/bootstrap@%VERSION%/dist
 
 :: Bootstrap Icons
-set ICONS_VERSION=1.11.3
+set ICONS_VERSION=1.13.1
 set URL_BOOTSTRAP_ICONS_CSS=https://cdn.jsdelivr.net/npm/bootstrap-icons@%ICONS_VERSION%/font/bootstrap-icons.css
 set URL_FONT_WOFF=https://cdn.jsdelivr.net/npm/bootstrap-icons@%ICONS_VERSION%/font/fonts/bootstrap-icons.woff
 set URL_FONT_WOFF2=https://cdn.jsdelivr.net/npm/bootstrap-icons@%ICONS_VERSION%/font/fonts/bootstrap-icons.woff2

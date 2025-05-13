@@ -11,11 +11,11 @@ cd "$(dirname "$0")" || exit
 
 echo "Configuring Version and URLs"
 echo "----------------------------"
-VERSION="5.3.3"
+VERSION="5.3.6"
 URL_BASE="https://cdn.jsdelivr.net/npm/bootstrap@${VERSION}/dist"
 
 # Bootstrap Icons
-ICONS_VERSION="1.11.3"
+ICONS_VERSION="1.13.1"
 URL_BOOTSTRAP_ICONS_CSS="https://cdn.jsdelivr.net/npm/bootstrap-icons@${ICONS_VERSION}/font/bootstrap-icons.css"
 URL_FONT_WOFF="https://cdn.jsdelivr.net/npm/bootstrap-icons@${ICONS_VERSION}/font/fonts/bootstrap-icons.woff"
 URL_FONT_WOFF2="https://cdn.jsdelivr.net/npm/bootstrap-icons@${ICONS_VERSION}/font/fonts/bootstrap-icons.woff2"
