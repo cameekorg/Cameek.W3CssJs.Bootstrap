@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 echo
 echo "Download Bootstrap"
 echo "=================="
@@ -11,17 +13,18 @@ cd "$(dirname "$0")" || exit
 
 echo "Configuring Version and URLs"
 echo "----------------------------"
-VERSION="5.3.6"
+VERSION="5.3.8"
 URL_BASE="https://cdn.jsdelivr.net/npm/bootstrap@${VERSION}/dist"
 
 # Bootstrap Icons
-ICONS_VERSION="1.13.1"
+ICONS_VERSION="1.13.2"
 URL_BOOTSTRAP_ICONS_CSS="https://cdn.jsdelivr.net/npm/bootstrap-icons@${ICONS_VERSION}/font/bootstrap-icons.css"
 URL_FONT_WOFF="https://cdn.jsdelivr.net/npm/bootstrap-icons@${ICONS_VERSION}/font/fonts/bootstrap-icons.woff"
 URL_FONT_WOFF2="https://cdn.jsdelivr.net/npm/bootstrap-icons@${ICONS_VERSION}/font/fonts/bootstrap-icons.woff2"
 
 # License
-URL_LICENSE="https://raw.githubusercontent.com/twbs/bootstrap/main/LICENSE"
+URL_LICENSE="https://raw.githubusercontent.com/twbs/bootstrap/v${VERSION}/LICENSE"
+URL_ICONS_LICENSE="https://raw.githubusercontent.com/twbs/icons/v${ICONS_VERSION}/LICENSE"
 
 echo
 echo "Configuring Target Directories and Files"
@@ -31,6 +34,7 @@ TARGET_CSS_DIR="${TARGET_WWW_DIR}/css"
 TARGET_JS_DIR="${TARGET_WWW_DIR}/js"
 TARGET_FONT_DIR="${TARGET_CSS_DIR}/fonts"
 TARGET_LICENSE="${TARGET_WWW_DIR}/LICENSE-bootstrap.txt"
+TARGET_ICONS_LICENSE="${TARGET_WWW_DIR}/LICENSE-bootstrap-icons.txt"
 
 echo
 echo "Creating Directories"
@@ -64,7 +68,7 @@ CSS_FILES=(
 )
 
 for f in "${CSS_FILES[@]}"; do
-  curl -o "${TARGET_CSS_DIR}/${f}" "${URL_BASE}/css/${f}"
+  curl --fail --show-error --silent --location -o "${TARGET_CSS_DIR}/${f}" "${URL_BASE}/css/${f}"
 done
 
 # JS
@@ -78,16 +82,17 @@ JS_FILES=(
 )
 
 for f in "${JS_FILES[@]}"; do
-  curl -o "${TARGET_JS_DIR}/${f}" "${URL_BASE}/js/${f}"
+  curl --fail --show-error --silent --location -o "${TARGET_JS_DIR}/${f}" "${URL_BASE}/js/${f}"
 done
 
 # Bootstrap Icons
-curl -o "${TARGET_CSS_DIR}/bootstrap-icons.css" "$URL_BOOTSTRAP_ICONS_CSS"
-curl -o "${TARGET_FONT_DIR}/bootstrap-icons.woff" "$URL_FONT_WOFF"
-curl -o "${TARGET_FONT_DIR}/bootstrap-icons.woff2" "$URL_FONT_WOFF2"
+curl --fail --show-error --silent --location -o "${TARGET_CSS_DIR}/bootstrap-icons.css" "$URL_BOOTSTRAP_ICONS_CSS"
+curl --fail --show-error --silent --location -o "${TARGET_FONT_DIR}/bootstrap-icons.woff" "$URL_FONT_WOFF"
+curl --fail --show-error --silent --location -o "${TARGET_FONT_DIR}/bootstrap-icons.woff2" "$URL_FONT_WOFF2"
 
 # License
-curl -o "$TARGET_LICENSE" "$URL_LICENSE"
+curl --fail --show-error --silent --location -o "$TARGET_LICENSE" "$URL_LICENSE"
+curl --fail --show-error --silent --location -o "$TARGET_ICONS_LICENSE" "$URL_ICONS_LICENSE"
 
 echo
 echo "==================================="

@@ -10,10 +10,10 @@
 
         <!-- NuGet Metadata -->
         <PackageId>Cameek.W3CssJs.Bootstrap</PackageId>
-        <Version>5.3.5</Version>
+        <Version>5.3.9</Version>
         <Authors>Cameek</Authors>
         <Company>Cameek</Company>
-        <Description>Static Razor Class Library with Bootstrap assets for syntax highlighting in Blazor WebAssembly and Blazor Server apps.</Description>
+        <Description>Static Razor Class Library with Bootstrap 5.3.8 and Bootstrap Icons 1.13.2 assets for Blazor WebAssembly and Blazor Server apps.</Description>
         <PackageTags>blazor;bootstrap;syntax-highlighting;razor-class-library;webassets</PackageTags>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <RepositoryUrl>https://github.com/cameekorg/Cameek.W3CssJs.Bootstrap</RepositoryUrl>
